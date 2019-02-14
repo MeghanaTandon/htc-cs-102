@@ -1,15 +1,18 @@
 public class Restaurant {
 	public int rating;
 	public string name;
-	public numberOfReviews;
+	public int numberOfReviews;
 	
 	public void getRating() {
-		MessageBox.Show(rating);
+		MessageBox.Show("The overall rating of this restaurant is " + rating);
 	}
 
 	public void getName() {
-		MessageBox.Show(name);
+		MessageBox.Show("The name of the restaurant is " + name);
 	}
 
-	public void 
+	public void reportNumber()
+    {
+        MessageBox.Show("The number of reviews are " + numberOfReviews);
+    }
 }
