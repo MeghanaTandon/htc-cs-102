@@ -22,7 +22,7 @@ namespace ClassesIntro
 
         public void Bark()
         {
-            MessageBox.Show("Bark");
+            MessageBox.Show("Bark from" + Name);
         }
         public void SayName()
         {

@@ -21,9 +21,31 @@ namespace MovieList
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Movie> movieList;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            movieList = new List<Movie>();
+        }
+
+        private void textBoxTitle_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string movieTitle = textBlockTitle.Text;
+            string movieRelease = textBlockRelease.Text;
+            Movie movie = new Movie(movieTitle, movieRelease);
+
+        }
+
+        private void buttonAddMovie_Click(object sender, RoutedEventArgs e)
+        {
+            movieList.Add();
+        }
+
+        private void buttonShowMovie_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
