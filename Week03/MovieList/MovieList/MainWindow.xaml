@@ -11,10 +11,20 @@
         <TextBox x:Name="textBoxTitle" Height="23" TextWrapping="Wrap" TextChanged="textBoxTitle_TextChanged" RenderTransformOrigin="0.503,1.555"/>
         <TextBlock x:Name="textBlockRelease" TextWrapping="Wrap" Text="Release Year: "/>
         <TextBox x:Name="textBoxRelease" Height="23" TextWrapping="Wrap"/>
+        <TextBlock x:Name="textBlockGenre" TextWrapping="Wrap" Text="Genre: "/>
+        <TextBox x:Name="textBoxGenre" Height="23" TextWrapping="Wrap"/>
+        <TextBlock x:Name="textBlockDirector"  TextWrapping="Wrap" Text="Director: "/>
+        <TextBox x:Name="textBoxDirector" Height="23" TextWrapping="Wrap" />
+        <TextBlock x:Name="textBlockLength" TextWrapping="Wrap" Text="Lenth: "/>
+        <TextBox x:Name="textBoxLength"  Height="23" TextWrapping="Wrap"/>
         <Button x:Name="buttonAddMovie" Content="Add Movie" Click="buttonAddMovie_Click"/>
         <Button x:Name="buttonShowMovie" Content="Show All Movies" Click="buttonShowMovie_Click"/>
 
-
-
     </StackPanel>
+
+
 </Window>
+    
+
+
+

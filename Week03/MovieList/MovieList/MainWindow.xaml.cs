@@ -31,21 +31,30 @@ namespace MovieList
         }
 
         private void textBoxTitle_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string movieTitle = textBlockTitle.Text;
-            string movieRelease = textBlockRelease.Text;
-            Movie movie = new Movie(movieTitle, movieRelease);
+        { 
 
         }
 
         private void buttonAddMovie_Click(object sender, RoutedEventArgs e)
         {
-            movieList.Add();
+            Movie addMovie = new MovieList.Movie(textBoxTitle.Text, Int32.Parse(textBoxRelease.Text), textBoxDirector.Text, textBoxGenre.Text, Int32.Parse(textBoxRelease.Text));
+            movieList.Add(addMovie);
+            textBoxRelease.Text = String.Empty;
+            textBoxTitle.Text = String.Empty;
+            textBoxDirector.Text = String.Empty;
+            textBoxGenre.Text = String.Empty;
+            textBoxLength.Text = String.Empty;
         }
 
         private void buttonShowMovie_Click(object sender, RoutedEventArgs e)
         {
-
+            StringBuilder sb = new StringBuilder();
+            foreach (Movie movie in movieList
+                )
+            {
+                sb.Append(movie.ShowMovieInfo() + "\n");
+            }
+            MessageBox.Show(sb.ToString());
         }
     }
 }
