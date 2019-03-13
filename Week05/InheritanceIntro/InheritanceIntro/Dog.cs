@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace InheritanceIntro
 {
-    public class Dog
+    public class Dog : Animal
     {
         public string Name;
         public int Height;

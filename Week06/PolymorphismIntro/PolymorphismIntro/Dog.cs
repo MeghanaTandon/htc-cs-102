@@ -11,6 +11,11 @@ namespace PolymorphismIntro
     {
         public string Breed;
 
+        public override void Speak()
+        {
+            Bark();
+        }
+
         public void Bark()
         {
             MessageBox.Show("Bark");
