@@ -19,6 +19,11 @@ namespace PolymorphismIntro
             get;
             set;
         }
+        public int Weight
+        {
+            get;
+            set;
+        }
 
         public void SayName()
         {
@@ -28,6 +33,16 @@ namespace PolymorphismIntro
         public virtual void Speak()
         {
 
+        }
+
+        public virtual void ShowInfo()
+        {
+            MessageBox.Show(ToString());
+        }
+
+        public override string ToString()
+        {
+            return "Name: " + Name + "\nHeight: " + Height + "\nWeight: " + Weight;
         }
     }
 }
