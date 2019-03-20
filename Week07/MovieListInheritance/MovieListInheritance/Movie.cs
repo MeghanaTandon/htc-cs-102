@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace MovieList
 {
@@ -16,19 +17,21 @@ namespace MovieList
             set;
         }
 
-        public void ShowDetails()
+        virtual public void ShowDetails()
         {
             string infoString = "Title: " + this.Title;
             infoString += "\nRelease Year: " + this.ReleaseYear;
-            MessageBox.Show(infoString);
+            //MessageBox.Show(infoString);
+            System.Diagnostics.Process.Start("https://en.wikipedia.org/wiki/" + Title);
         }
 
         public Movie() { }
 
         public Movie(string myTitle, int myReleaseYear)
         {
-            this.Title = myTitle;
-            this.ReleaseYear = myReleaseYear;
+                this.Title = myTitle;
+                this.ReleaseYear = myReleaseYear;
+            }
         }
     }
-}
+

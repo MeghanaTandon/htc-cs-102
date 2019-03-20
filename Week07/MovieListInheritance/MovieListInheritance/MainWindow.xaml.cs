@@ -33,12 +33,54 @@ namespace MovieList
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Movie movieToAdd = new Movie(titleInput.Text, int.Parse(releaseYearInput.Text));
+            int year;
+
+            try
+            {
+                year = int.Parse(releaseYearInput.Text);
+            }
+            catch (FormatException d)
+            {
+                MessageBox.Show("Please enter a valid year.");
+                return;
+            }
+            
+
+            Movie movieToAdd = new Movie(titleInput.Text, year);
 
             MovieList.Add(movieToAdd);
 
             titleInput.Clear();
             releaseYearInput.Clear();
+        }
+
+        private void AddAnimatedMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            int year;
+
+            try
+            {
+                year = int.Parse(releaseYearInput.Text);
+            }
+            catch (FormatException d)
+            {
+                MessageBox.Show("Please enter a valid year.");
+                return;
+            }
+            string Title = titleInput.Text;
+            int Year = int.Parse(releaseYearInput.Text);
+            string Studio = animationStudio.Text;
+            string Type = animationType.Text;
+
+            AnimatedMovie movieToAdd = new AnimatedMovie(Title, Year, Studio, Type);
+
+            MovieList.Add(movieToAdd);
+
+            titleInput.Clear();
+            releaseYearInput.Clear();
+            animationStudio.Clear();
+            animationType.Clear();
+
         }
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)
